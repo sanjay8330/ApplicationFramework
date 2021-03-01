@@ -1,0 +1,112 @@
+<html>
+    <head>
+        <title>
+            My Second JavaScript Example
+        </title>
+    </head>
+    <body>
+        <script>
+            //Question 01 --- Promises and Callbacks
+            /*Part A*/
+            let method1 = function(){
+                value = 10;
+                setTimeout(function(){
+                    return value; 
+                }, 1000);
+            }
+
+            /*Part B*/
+            let method2 = function(callback){
+                value = 10;
+                setTimeout(function(){
+                    value = 15; 
+                    callback(value);
+                }, 1000);
+            }
+
+            /*Part C*/
+            let method3 = function(){
+                value = 10;
+                return new Promise(function(resolve,reject){
+                    setTimeout(function(){
+                        value = 50;
+                        resolve(value);
+                    }, 1000);
+                });
+            }
+
+            //Executing the created promises
+            method3().then(function(value){
+                console.log(value);
+            });
+
+            //Question 02 --- Inheritance
+            function Vehicle(vehType){
+                this.type = vehType;
+                Vehicle.vehicleCount++;
+            }
+
+            Vehicle.prototype.drive = function(){
+                console.log('Vehicle is driving!!!');
+            }
+
+            Vehicle.vehicleCount = 0;
+
+            //Creating the Vehicle object
+            const car = new Vehicle('Car');
+            car.drive;
+            console.log(car.vehicleCount);
+
+            //Creating a class called Car
+            function Car(cartype){
+                Vehicle.call(this,cartype);
+            }
+
+            Car.prototype = Object.create(Vehicle.prototype);
+            Car.prototype.constructor = Car;
+
+            Car.prototype.balanceWheels = function(){
+                console.log('Wheels are balanced');
+            }
+
+            //Calling the Car Object
+            const toyotaCar = new Car('Toyota');
+            toyotaCar.balanceWheels();
+            toyotaCar.drive();
+            console.log(toyotaCar.vehicleCount);
+
+            //Question 04 --- Asyn function
+            async function anAsyncfunction(){
+                let value = await method1();
+                value = await method3(value);
+                return value;
+            }
+
+            //Question 05  ----- Normal class syntax
+            class VehicleNew{
+                constructor(name){
+                    this.type = name;
+                }
+                getName(){
+                    return this.type;
+                }
+            }
+
+            class CarNew extends VehicleNew{
+                constructor(type,name){
+                    super(type);
+                    this.name = name;
+                }
+
+                getName(){
+                    return this.name;
+                }
+            }
+
+            const carNew = new CarNew("Car","Nissan");
+            carNew.getName();
+
+
+        </script>
+    </body>
+</html>

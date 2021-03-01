@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title>
+            My first JavaScript Program
+        </title>
+    </head>
+    <body>
+        <script>
+            /*****Question-1*****/
+            //Creating the method to print Hello world in console
+            let method1 = function(){
+                console.log('Hello World');
+                return 'Hello World';
+            }
+            //Creating the method to print input value in console
+            let method2 = function(value){
+                console.log(`Hello ${value}`);
+            }
+            //Calling the method
+            method2(method1());
+
+            /*****Question-2*****/
+            let jsonObject = {
+                name:'SLIIT',
+                location:'Malabe',
+                faculty:'Computing',
+                printDetails:function(){
+                    console.log(this.name+' is located in'+this.location);
+                }
+            }
+
+            //Access the JSON object
+            jsonObject.name;
+            jsonObject.printDetails();
+
+            /*****Question-3*****/
+            //-a- Declaring a global variable
+            window.vehicleName = 'Four-wheeled';
+
+            //-b- declaring a method to print details
+            let printVehicleNameGlobal = function(){
+                console.log(`The global vehicle name is ${this.vehicleName}`);
+            }
+
+            //-c- creating a vehicle class with properties
+            let Vehicle = {
+                vehiclename : 'Car',
+                printVehicleName : function(){
+                    console.log(this.vehiclename);
+                }
+            }
+
+            //-d- Calling the methods created
+            printVehicleNameGlobal();
+            Vehicle.printVehicleName();
+
+             /*****Question-4*****/
+             //1---Creating a function that accepts taxpercentage
+             //2---Setting a predefined amount of 5000
+             //3---Returning the function with the amount
+             window.taxPercent = 0.3;
+             let taxfunction1 = function(taxPercent){
+                 amount = 5000;
+                 return function(amount){
+                    return amount + (amount * this.taxPercent);
+                 }
+             }
+
+             //4---Calling the created function
+             console.log(taxfunction1(0.3));
+
+
+        </script>
+    </body>
+</html>
