@@ -14,8 +14,16 @@ http.createServer((req, res) => {
         res.write('<h1>Hello ' + data + '</h1>');
         res.end();
         });
+        case 'PUT':
+        req.on('data', newdata => {
+        res.write('<h1>Hello ' + newdata + '</h1>');
+        res.end();
+        });
         break;
     }
 }).listen(3000, (err) => {
-    console.log('Server is listening to port 3000')
+    console.log('Server is listening to port 3000');
+    if(err){
+        console.log('Error Occurred '+err);
+    }
 });
