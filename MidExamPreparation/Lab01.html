@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>My fist JS Application</title>
+    </head>
+    <body>
+        <script>
+            let x = function(){
+                console.log('Hello World!!!!');
+                return 'Helo World';
+            }
+                let y = function(x){
+                console.log(`The value is ${x}`);
+            }
+
+            y(x());
+
+            let obj = {
+                name : "John",
+                age : 15,
+                printDetails : function(){
+                    console.log('The name is '+this.name+' and the age is '+this.age);
+                }
+            }
+
+            console.log('Name is '+obj.name);
+            obj.printDetails();
+
+            window.vehicleName = 'Four-wheeled';
+
+            function printVehicleName(){
+                console.log(`The Vehicle Name is ${this.vehicleName}`);
+            }
+
+            let vehicle = {
+                vehicleName : 'Car',
+                getVehicleName : printVehicleName()
+            }
+
+            printVehicleName();
+            vehicle.getVehicleName;
+
+            var tax = (function(taxpercent){
+                var amount = 1000;
+                return function(amount){
+                    return (amount + (amount * this.taxpercent/100));
+                } 
+            })();
+
+            console.log(tax(3));
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <title>The Second JS apploication</title>
+    </head>
+    <body>
+        <script>
+            let method1 = function(){
+                value = 10;
+                setTimeout(function(){
+                    return value; 
+                }, 2000);
+            }
+
+            //console.log(method1());
+
+            let method2 = function(callback){
+                value = 10;
+                setTimeout(function(){
+                    callback(value); 
+                }, 2000);
+            }
+
+            method2(function(value){
+                console.log(value);
+            })
+
+            let method3 = function(){
+                var value = 100;
+               return new Promise(function(resolve,reject){
+                   setTimeout(() => {
+                       value = 50;
+                       resolve(value);
+                   }, 1000);
+               })
+            }
+
+            method3().then(function(value){
+                console.log(value);
+            })
+
+            let Vehicle = function(vehicleType){
+                this.type = vehicleType;
+                this.vehicleCount++;
+            }
+
+            Vehicle.prototype.print = function(){
+                console.log(`${this.type} Vehicle is driving!!!`);
+            }
+
+            Vehicle.vehicleCount = 0;
+
+            const car = new Vehicle('Car');
+            console.log(car.vehicleCount);
+            car.print();
+
+            let Car = function(cartype){
+                Vehicle.call(this,cartype);
+            }
+
+            Car.prototype = Object.create(Vehicle.prototype);
+            Car.prototype.constructor = Car;
+
+            Car.prototype.drive = function(){
+                console.log('Wheels are balanced');
+            }
+
+            const toyota = new Car('Toyota');
+            toyota.drive();
+            toyota.print();
+            console.log(toyota.vehicleCount);
+
+            class Vehicle{
+                constructor(type){
+                    this.type = type;
+                }
+                printDetails(){
+                    console.log('Vehicle is driving');
+                }
+            }
+
+            class Car extends Vehicle{
+                constructor(cartype){
+                    super(cartype);
+                }
+                balanceWheels(){
+                    console.log('Wheels are balanced');
+                }
+            }
+
+
+        </script>
+    </body>
+</html>
