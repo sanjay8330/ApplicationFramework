@@ -1,12 +1,13 @@
 //Importing koa to the server.js file
 const koa = require('koa');
+require('./dal');
 
 const koabodyparser = require('koa-bodyparser');
 //Importing the routes from the hom.routes.js
 const HomeRoutes = require('./routes/home.routes');
 
 //Importing the routes from the post.routes.js
-const HomeRoutesNew = require('./routes/home.routes');
+const HomeRoutesNew = require('./routes/post.routes');
 
 
 
