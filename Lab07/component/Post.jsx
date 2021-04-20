@@ -2,7 +2,7 @@ import React from 'react';
 
 export default class Post extends React.Component {
     constructor(props) { 
-        super(props); 
+        super(props);
     } 
     
     render() { 
@@ -19,6 +19,6 @@ export default class Post extends React.Component {
                 <p>Description: {post.description}</p>
             </div> 
         </div>
-        )
+        );
     };
 }

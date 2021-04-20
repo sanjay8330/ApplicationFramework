@@ -1,5 +1,5 @@
 //import React from 'react';
-//import Posts from '../component/Posts'; 
+import Posts from '../component/Posts'; 
 
 import React from 'react'; 
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'; 
@@ -10,13 +10,17 @@ export default class App extends React.Component {
         super(props); 
     } 
     render() { 
-        return <Router> 
+        return (<div> 
+            <Posts posts={posts}/>  
+        </div>);
+        
+        (<Router> 
             <Switch> 
                 <Route exact path="/"> 
                     <PostsHolder/> 
                 </Route> 
             </Switch> 
-        </Router> 
+        </Router>);
     };
 }
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import PostListItem from './PostListItem';
+import Post from './Post';
 
 export default class Posts extends React.Component {
     constructor(props) { 
@@ -16,7 +17,7 @@ export default class Posts extends React.Component {
 
     render() { 
         const {posts} = this.props; 
-        return <div> 
+        return (<div> 
             <table> 
                 <thead> 
                     <tr> 
@@ -27,11 +28,12 @@ export default class Posts extends React.Component {
                     </tr> 
                 </thead> 
                 <tbody> {posts.map(post => { 
-                    return <PostListItem key={post.id.toString()} post={post}/>
+                    return <PostListItem key={post.id.toString()} post={post}
+                                selectPost={post => this.selectPost(post)}/>
                     })} 
                 </tbody> 
             </table> 
             <div> {this.state.post ? <Post post={this.state.post} editable={false}/> : ''} </div>
-        </div> 
+        </div>); 
     };
 }

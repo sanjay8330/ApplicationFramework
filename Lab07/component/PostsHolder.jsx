@@ -1,4 +1,5 @@
 import React from 'react'; 
+import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 import Posts from './Posts'; 
 
 const posts = [ 
@@ -15,8 +16,23 @@ const posts = [
 export default class PostsHolder extends React.Component {
     constructor(props) { 
         super(props); 
-    } 
+    }
+
+    addNewPost({name, description}) { 
+        posts.push({id: posts.length + 1, name, description}); 
+    }
+    
     render() { 
-        return <Posts posts={posts}/>; 
+        return (<div>
+            <Posts posts={posts}/>
+            <Router>
+                <Switch>
+                    <Route exact path="/add"> 
+                        <AddPost save={this.addNewPost}/> 
+                    </Route>
+                </Switch>
+                <Link to="/add">Add</Link>
+            </Router>
+            </div>); 
     }
 }
