@@ -10,14 +10,10 @@ export default class App extends React.Component {
         super(props); 
     } 
     render() { 
-        return (<div> 
-            <Posts posts={posts}/>  
-        </div>);
-        
-        (<Router> 
+        return (<Router> 
             <Switch> 
                 <Route exact path="/"> 
-                    <PostsHolder/> 
+                    <PostsHolder /> 
                 </Route> 
             </Switch> 
         </Router>);

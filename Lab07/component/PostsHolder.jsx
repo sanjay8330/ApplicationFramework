@@ -25,14 +25,15 @@ export default class PostsHolder extends React.Component {
     render() { 
         return (<div>
             <Posts posts={posts}/>
-            <Router>
+            //This part is the problem
+            /*<Router>
                 <Switch>
                     <Route exact path="/add"> 
                         <AddPost save={this.addNewPost}/> 
                     </Route>
                 </Switch>
                 <Link to="/add">Add</Link>
-            </Router>
+            </Router>*/
             </div>); 
     }
 }

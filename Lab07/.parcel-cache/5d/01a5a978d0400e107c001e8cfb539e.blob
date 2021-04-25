@@ -30519,18 +30519,18 @@ try {
             lineNumber: 27,
             columnNumber: 13
           }
-        }), "//This part is the problem /*", /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.BrowserRouter, {
+        }), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.BrowserRouter, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 29,
-            columnNumber: 15
+            lineNumber: 28,
+            columnNumber: 13
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Switch, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 30,
+            lineNumber: 29,
             columnNumber: 17
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
@@ -30539,7 +30539,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 31,
+            lineNumber: 30,
             columnNumber: 21
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(AddPost, {
@@ -30547,7 +30547,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 32,
+            lineNumber: 31,
             columnNumber: 25
           }
         }))), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Link, {
@@ -30555,10 +30555,10 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 35,
+            lineNumber: 34,
             columnNumber: 17
           }
-        }, "Add")), "*/")
+        }, "Add")))
       );
     }
   }
@@ -30854,4 +30854,4 @@ try {
 
 },{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}]},["1j6wU","3L2qK","5Qvcc"], "5Qvcc", "parcelRequire76ec")
 
-//# sourceMappingURL=index.63f10152.js.map
+//# sourceMappingURL=index.HASH_REF_ca6253830bf612b84ef417e863f10152.js.map
