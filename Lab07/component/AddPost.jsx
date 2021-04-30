@@ -16,7 +16,7 @@ export default class AddPost extends React.Component  {
     render() {
         const {save} = this.props; 
         return <div>
-            <Link to="/">Posts</Link> 
+            <Link to="/posts">Posts</Link> 
             <form> 
                 <div> 
                     <label htmlFor="name">Name:</label> 

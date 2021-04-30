@@ -2,7 +2,7 @@
 import Posts from '../component/Posts'; 
 
 import React from 'react'; 
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'; 
+import {BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom'; 
 import PostsHolder from '../component/PostsHolder';
 
 export default class App extends React.Component { 
@@ -12,10 +12,11 @@ export default class App extends React.Component {
     render() { 
         return (<Router> 
             <Switch> 
-                <Route exact path="/"> 
+                <Route exact path="/posts"> 
                     <PostsHolder /> 
                 </Route> 
             </Switch> 
+            <Redirect to='/posts'/>
         </Router>);
     };
 }

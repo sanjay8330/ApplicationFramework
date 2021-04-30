@@ -26299,7 +26299,7 @@ try {
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
           exact: true,
-          path: "/",
+          path: "/posts",
           __self: this,
           __source: {
             fileName: _jsxFileName,
@@ -26313,7 +26313,15 @@ try {
             lineNumber: 16,
             columnNumber: 21
           }
-        }))))
+        }))), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Redirect, {
+          to: "/posts",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 19,
+            columnNumber: 13
+          }
+        }))
       );
     }
   }
@@ -30481,6 +30489,8 @@ try {
   var _reactRouterDom = require('react-router-dom');
   var _Posts = require('./Posts');
   var _PostsDefault = _parcelHelpers.interopDefault(_Posts);
+  var _AddPost = require('./AddPost');
+  var _AddPostDefault = _parcelHelpers.interopDefault(_AddPost);
   var _jsxFileName = "C:\\Users\\HP\\.vscode\\extensions\\lab07\\component\\PostsHolder.jsx";
   const posts = [{
     id: 1,
@@ -30508,25 +30518,25 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 26,
+            lineNumber: 27,
             columnNumber: 17
           }
-        }, /*#__PURE__*/_reactDefault.default.createElement(_PostsDefault.default, {
-          posts: posts,
+        }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.BrowserRouter, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 27,
+            lineNumber: 28,
             columnNumber: 13
           }
-        }), "//This part is the problem /*", /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.BrowserRouter, {
+        }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Link, {
+          to: "/posts/add",
           __self: this,
           __source: {
             fileName: _jsxFileName,
             lineNumber: 29,
-            columnNumber: 15
+            columnNumber: 17
           }
-        }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Switch, {
+        }, "Add"), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Switch, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
@@ -30535,30 +30545,38 @@ try {
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
           exact: true,
-          path: "/add",
+          path: "/posts",
           __self: this,
           __source: {
             fileName: _jsxFileName,
             lineNumber: 31,
             columnNumber: 21
           }
-        }, /*#__PURE__*/_reactDefault.default.createElement(AddPost, {
-          save: this.addNewPost,
+        }, /*#__PURE__*/_reactDefault.default.createElement(_PostsDefault.default, {
+          posts: posts,
           __self: this,
           __source: {
             fileName: _jsxFileName,
             lineNumber: 32,
             columnNumber: 25
           }
-        }))), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Link, {
-          to: "/add",
+        })), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
+          path: "/posts/add",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 34,
+            columnNumber: 21
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement(_AddPostDefault.default, {
+          save: this.addNewPost,
           __self: this,
           __source: {
             fileName: _jsxFileName,
             lineNumber: 35,
-            columnNumber: 17
+            columnNumber: 25
           }
-        }, "Add")), "*/")
+        })))))
       );
     }
   }
@@ -30569,7 +30587,7 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","./Posts":"1GbhS","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","react-router-dom":"1PMSK"}],"1GbhS":[function(require,module,exports) {
+},{"react":"3b2NM","./Posts":"1GbhS","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","react-router-dom":"1PMSK","./AddPost":"1v8cf"}],"1GbhS":[function(require,module,exports) {
 var helpers = require("../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -30852,6 +30870,147 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}]},["1j6wU","3L2qK","5Qvcc"], "5Qvcc", "parcelRequire76ec")
+},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"1v8cf":[function(require,module,exports) {
+var helpers = require("../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require('react');
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  var _reactRouterDom = require('react-router-dom');
+  var _jsxFileName = "C:\\Users\\HP\\.vscode\\extensions\\lab07\\component\\AddPost.jsx";
+  class AddPost extends _reactDefault.default.Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        name: '',
+        description: ''
+      };
+    }
+    onChange(event) {
+      const {name, value} = event.target;
+      this.setState({
+        [name]: value
+      });
+    }
+    render() {
+      const {save} = this.props;
+      return (
+        /*#__PURE__*/_reactDefault.default.createElement("div", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 18,
+            columnNumber: 16
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Link, {
+          to: "/posts",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 19,
+            columnNumber: 13
+          }
+        }, "Posts"), /*#__PURE__*/_reactDefault.default.createElement("form", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 20,
+            columnNumber: 13
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 21,
+            columnNumber: 17
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("label", {
+          htmlFor: "name",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 22,
+            columnNumber: 21
+          }
+        }, "Name:"), /*#__PURE__*/_reactDefault.default.createElement("input", {
+          type: "text",
+          name: "name",
+          id: "name",
+          value: this.state.name,
+          onChange: event => this.onChange(event),
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 23,
+            columnNumber: 21
+          }
+        })), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 26,
+            columnNumber: 17
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("label", {
+          htmlFor: "description",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 27,
+            columnNumber: 21
+          }
+        }, "Description: "), /*#__PURE__*/_reactDefault.default.createElement("input", {
+          type: "text",
+          name: "description",
+          id: "description",
+          value: this.state.description,
+          onChange: event => this.onChange(event),
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 28,
+            columnNumber: 21
+          }
+        })), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 32,
+            columnNumber: 17
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("button", {
+          onClick: event => {
+            event.preventDefault();
+            save({
+              name: this.state.name,
+              description: this.state.description
+            });
+            this.setState({
+              name: '',
+              description: ''
+            });
+          },
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 33,
+            columnNumber: 21
+          }
+        }, "Save"))))
+      );
+    }
+  }
+  exports.default = AddPost;
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+
+},{"react":"3b2NM","react-router-dom":"1PMSK","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}]},["1j6wU","3L2qK","5Qvcc"], "5Qvcc", "parcelRequire76ec")
 
 //# sourceMappingURL=index.63f10152.js.map
