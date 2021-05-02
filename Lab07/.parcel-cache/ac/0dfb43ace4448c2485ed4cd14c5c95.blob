@@ -26276,24 +26276,10 @@ try {
   var _reactRouterDom = require('react-router-dom');
   var _componentPostsHolder = require('../component/PostsHolder');
   var _componentPostsHolderDefault = _parcelHelpers.interopDefault(_componentPostsHolder);
-  var _UserContext = require('./UserContext');
-  var _UserContextDefault = _parcelHelpers.interopDefault(_UserContext);
   var _jsxFileName = "C:\\Users\\HP\\.vscode\\extensions\\lab07\\component\\App.jsx";
   class App extends _reactDefault.default.Component {
     constructor(props) {
       super(props);
-      this.state = {
-        user: null
-      };
-    }
-    componentDidMount() {
-      setTimeout(() => {
-        this.setState({
-          user: {
-            name: 'admin'
-          }
-        });
-      }, 5000);
     }
     render() {
       return (
@@ -26301,14 +26287,14 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 27,
+            lineNumber: 13,
             columnNumber: 17
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Switch, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 28,
+            lineNumber: 14,
             columnNumber: 13
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
@@ -26317,30 +26303,22 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 29,
+            lineNumber: 15,
             columnNumber: 17
-          }
-        }, /*#__PURE__*/_reactDefault.default.createElement(_UserContextDefault.default.Provider, {
-          value: this.state.user,
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 30,
-            columnNumber: 21
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_componentPostsHolderDefault.default, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 31,
-            columnNumber: 25
+            lineNumber: 16,
+            columnNumber: 21
           }
-        })))), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Redirect, {
+        }))), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Redirect, {
           to: "/posts",
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 35,
+            lineNumber: 19,
             columnNumber: 13
           }
         }))
@@ -26363,7 +26341,7 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","react-router-dom":"1PMSK","../component/PostsHolder":"RKxhR","../component/Posts":"1GbhS","./UserContext":"3VgOK"}],"5gA8y":[function(require,module,exports) {
+},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","react-router-dom":"1PMSK","../component/PostsHolder":"RKxhR","../component/Posts":"1GbhS"}],"5gA8y":[function(require,module,exports) {
 "use strict";
 
 exports.interopDefault = function (a) {
@@ -30904,8 +30882,6 @@ try {
   var _react = require('react');
   var _reactDefault = _parcelHelpers.interopDefault(_react);
   var _reactRouterDom = require('react-router-dom');
-  var _UserContext = require('./UserContext');
-  var _UserContextDefault = _parcelHelpers.interopDefault(_UserContext);
   var _jsxFileName = "C:\\Users\\HP\\.vscode\\extensions\\lab07\\component\\AddPost.jsx";
   class AddPost extends _reactDefault.default.Component {
     constructor(props) {
@@ -30928,7 +30904,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 20,
+            lineNumber: 18,
             columnNumber: 16
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Link, {
@@ -30936,28 +30912,21 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 21,
+            lineNumber: 19,
             columnNumber: 13
           }
-        }, "Posts"), this.context ? /*#__PURE__*/_reactDefault.default.createElement("div", {
+        }, "Posts"), /*#__PURE__*/_reactDefault.default.createElement("form", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 22,
-            columnNumber: 29
-          }
-        }, "Welcome : ", this.context.name) : '', /*#__PURE__*/_reactDefault.default.createElement("form", {
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 23,
+            lineNumber: 20,
             columnNumber: 13
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("div", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 24,
+            lineNumber: 21,
             columnNumber: 17
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("label", {
@@ -30965,7 +30934,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 25,
+            lineNumber: 22,
             columnNumber: 21
           }
         }, "Name:"), /*#__PURE__*/_reactDefault.default.createElement("input", {
@@ -30977,14 +30946,14 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 26,
+            lineNumber: 23,
             columnNumber: 21
           }
         })), /*#__PURE__*/_reactDefault.default.createElement("div", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 29,
+            lineNumber: 26,
             columnNumber: 17
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("label", {
@@ -30992,7 +30961,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 30,
+            lineNumber: 27,
             columnNumber: 21
           }
         }, "Description: "), /*#__PURE__*/_reactDefault.default.createElement("input", {
@@ -31004,14 +30973,14 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 31,
+            lineNumber: 28,
             columnNumber: 21
           }
         })), /*#__PURE__*/_reactDefault.default.createElement("div", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 35,
+            lineNumber: 32,
             columnNumber: 17
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("button", {
@@ -31029,7 +30998,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 36,
+            lineNumber: 33,
             columnNumber: 21
           }
         }, "Save"))))
@@ -31037,35 +31006,13 @@ try {
     }
   }
   exports.default = AddPost;
-  AddPost.contextType = _UserContextDefault.default;
   helpers.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","react-router-dom":"1PMSK","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./UserContext":"3VgOK"}],"3VgOK":[function(require,module,exports) {
-var helpers = require("../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-helpers.prelude(module);
-try {
-  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
-  _parcelHelpers.defineInteropFlag(exports);
-  var _react = require('react');
-  var _reactDefault = _parcelHelpers.interopDefault(_react);
-  const user = {
-    name: 'app_user'
-  };
-  const UserContext = /*#__PURE__*/_reactDefault.default.createContext(user);
-  exports.default = UserContext;
-  helpers.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-
-},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"6L4OH":[function(require,module,exports) {
+},{"react":"3b2NM","react-router-dom":"1PMSK","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"6L4OH":[function(require,module,exports) {
 var helpers = require("../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -31194,4 +31141,4 @@ try {
 
 },{"react":"3b2NM","./PostListItem":"2qCXD","./Post":"3M3ck","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}]},["1j6wU","3L2qK","5Qvcc"], "5Qvcc", "parcelRequire76ec")
 
-//# sourceMappingURL=index.63f10152.js.map
+//# sourceMappingURL=index.HASH_REF_ca6253830bf612b84ef417e863f10152.js.map

@@ -1,6 +1,7 @@
 import React from 'react'; 
 import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 import Posts from './Posts'; 
+import PostsFunctional from './PostsFunctional';
 import AddPost from './AddPost'; 
 
 const posts = [ 
@@ -29,7 +30,7 @@ export default class PostsHolder extends React.Component {
                 <Link to="/posts/add">Add</Link>
                 <Switch>
                     <Route exact path="/posts">
-                        <Posts posts={posts}/>
+                        <PostsFunctional posts={posts}/>
                     </Route>
                     <Route  path='/posts/add'>
                         <AddPost save={this.addNewPost}/>

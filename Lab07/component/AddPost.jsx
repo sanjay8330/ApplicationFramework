@@ -1,7 +1,9 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import UserContext from './UserContext';
 
 export default class AddPost extends React.Component  {
+
     constructor(props) { 
         super(props); 
         this.state = { 
@@ -17,6 +19,7 @@ export default class AddPost extends React.Component  {
         const {save} = this.props; 
         return <div>
             <Link to="/posts">Posts</Link> 
+            {this.context ? <div>Welcome : {this.context.name}</div>:''}
             <form> 
                 <div> 
                     <label htmlFor="name">Name:</label> 
@@ -44,3 +47,5 @@ export default class AddPost extends React.Component  {
         </div>;
     }
 }
+
+AddPost.contextType = UserContext;
