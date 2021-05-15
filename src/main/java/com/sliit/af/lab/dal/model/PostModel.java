@@ -1,24 +1,19 @@
-package com.sliit.af.lab.domain;
+package com.sliit.af.lab.dal.model;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDateTime;
 
-public class Post {
+@Document("posts")
+public class PostModel {
+
+    @Id
     private String id;
     private String name;
     private String description;
     private LocalDateTime postedDate;
 
-    //Constructors
-    public Post() {
-    }
-
-    public Post(String id, String name, String description) {
-        this.id = id;
-        this.name = name;
-        this.description = description;
-    }
-
-    //Getters and setters
     public String getId() {
         return id;
     }
